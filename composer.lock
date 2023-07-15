@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "143a248bc74a0e72096419c2725fba70",
+    "content-hash": "1b810a97940d5b00f5a6e7c304aef66e",
     "packages": [
         {
             "name": "brick/math",
@@ -5899,6 +5899,54 @@
             "time": "2023-06-28T18:31:28+00:00"
         },
         {
+            "name": "lightspeedphp/lightspeed",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jradtilbrook/thingy-client",
+                "reference": "9e6861191727f23b530d24993ee7331d7497e656"
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^7.3 || ^8.0",
+                "phpunit/phpunit": "^9.1.4"
+            },
+            "default-branch": true,
+            "bin": [
+                "bin/lightspeed"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lightspeed\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jarryd Tilbrook",
+                    "email": "jarryd@tilbrooktech.com"
+                }
+            ],
+            "description": "Run tests faster by splitting them across nodes.",
+            "keywords": [
+                "framework",
+                "pest",
+                "php",
+                "test",
+                "testing",
+                "unit"
+            ],
+            "time": "2023-07-15T12:35:54+00:00"
+        },
+        {
             "name": "mockery/mockery",
             "version": "1.6.2",
             "source": {
@@ -8213,7 +8261,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "lightspeedphp/lightspeed": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
